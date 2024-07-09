@@ -1,0 +1,197 @@
+.container{
+    width: 100%;
+    /* background-color: rgb(167, 211, 221); */
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+.logoutBox{
+    /* background-color: rgb(216, 231, 86); */
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 90px;
+    background-color: rgb(230, 230, 229);
+    border-radius: 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logoutLink{
+    text-decoration: none;
+    color: black;
+    /* background-color: aqua; */
+    /* display: block; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.detailsContainer{
+    width: 80%;
+    height: 300px;
+    border-bottom: 1px solid rgb(157, 151, 151);
+    padding-top: 40px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    /* padding-top: 30px; */
+    /* background-color: rgb(215, 241, 250); */
+}
+.heading{
+    align-self: center;
+}
+.profileInfoTable{
+    width: 40%;
+    height: 50%;
+    margin: 30px 0px;
+}
+.editBtn{
+    background-color: transparent;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+.editIcon a{
+    color: black;
+}
+.userBlogContainer{
+    margin-top: 40px;
+    /* background-color: aliceblue; */
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    min-height: 80vh;
+    margin-bottom: 50px;
+}
+.blogsContainer{
+    width: 100%;
+    min-height: 70vh;
+    /* background-color: mistyrose; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 50px 0px;
+}
+
+.blogCard{
+    width: 360px;
+    height: 360px;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    position: relative;
+    background-color: white;
+    box-shadow: 0 0 5px rgb(186, 186, 186);
+    padding: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+.blogTitle{
+    margin-bottom: 10px;
+}
+.blogTitleText{
+    font-size: 18px;
+    color: rgb(86, 86, 86);
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+}
+.blogBody{
+    height: 80px;
+}
+.blogBodyText{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.reactionBox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+.tagBox{
+    max-width: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: hidden;
+}
+.tagSpan{
+    background-color: #fe9900;
+    padding: 5px 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+.readBtn{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    font-weight: 400;
+    cursor: pointer;
+    display: inline-block;
+}
+.menuIconBoxContainer{
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.menuIconBox{
+    position: relative;
+    width: 80px;
+    height: 60px;
+}
+.readMoreBox{
+    margin-top: 10px;
+}
+.menuIcon{
+    transform: rotate(90deg);
+    display: block;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.editIcon{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+.deleteIcon{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    box-shadow: 0 0 3px gray;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+.container{
+    height: calc(100vh - 130px);
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+.sectionAbout{
+    position: relative;
+    width: 100vw;
+}
+.aboutImage{
+    width: 500px;
+}
+.aboutImage img{
+    width: 100%;
+}
+.aboutPara {
+    width: 600px;
+    padding-top: 40px;
+    /* height: 350px; */
+    border-radius: 10px ;
+}

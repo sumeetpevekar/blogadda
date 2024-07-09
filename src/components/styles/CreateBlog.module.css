@@ -1,0 +1,40 @@
+.createBlogContainer{
+    width: 100vw;
+    height: calc(100vh - 130px);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb(215, 214, 214);
+    font-family: "Poppins", sans-serif;
+    padding: 30px 100px;
+}
+.heading{
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.formContainer{
+    /* background-color: antiquewhite; */
+    width: 60%;
+}
+.formContainer input, .formContainer textarea{
+    width: 100%;
+    padding: 10px;
+}
+.formContainer input{
+    height: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.formContainer button{
+    width: 80px;
+    height: 30px;
+    background-color: #FFAF36;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: "Poppins", sans-serif;
+
+}

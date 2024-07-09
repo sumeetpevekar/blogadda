@@ -1,0 +1,69 @@
+.AdminUsersSection{
+    /* background-color: rgb(204, 129, 114); */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 90%;
+    height: 80%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    height: 600px;
+}
+.adminUsers{
+    /* background-color: rgb(212, 254, 116); */
+    width: 100%;
+    /* height: 400px; */
+    overflow: auto;
+}
+    
+.adminUsers::-webkit-scrollbar {
+width: 10px;
+}
+/* Define scrollbar track styles */
+.adminUsers::-webkit-scrollbar-track {
+background-color: #fcfcfc;
+height: 10px;
+}
+
+/* Define scrollbar thumb styles */
+.adminUsers::-webkit-scrollbar-thumb {
+background-color: #888;
+border-radius: 10px;
+}
+.updateUser{
+    background-color: rgb(192, 240, 200);
+    padding: 4px 20px;
+    border-radius: 10px;
+    color: green;
+    border: none;
+    cursor: pointer;
+}
+.deleteUser{
+    background-color:#db515f;
+    padding: 4px 10px;
+    border-radius: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+.link{
+    text-decoration: none;
+    color: green;
+}
+@media screen and (max-width: 500px) {
+    .heading{
+        font-size: 18px;
+    }
+}
+@media screen and (max-width: 690px) {
+    .heading{
+        font-size: 18px;
+        margin-left: 20px;
+    }
+}

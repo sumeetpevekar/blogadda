@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+.container{
+    /* height: calc(100vh - 130px); */
+    width: 100%;
+    /* background-color: antiquewhite; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lora", serif;
+}
+.wallpaperContainer{
+    width: 100%;
+    height: 450px;
+    /* background-color: aqua; */
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    background-color: #CCD3E6;
+}
+.wallpaperImgContainer{
+    width: 100%;
+    height: 80%;
+    opacity: 0.8;
+}
+.wallpaperImg{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.searchBoxContainer{
+    position: absolute;
+    /* background-color: white; */
+    width: 400px;
+    height: 50px;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.searchFormContainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    /* background-color: aquamarine; */
+}   
+.searchBlogInput{
+    width: 85%;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    height: 100%;
+    padding: 20px;
+    font-size: 15px;
+}
+.searchBlogInput:focus-visible{
+    outline: none;
+}
+.searchBlogBtn{
+    width: 15%;
+    color: white;
+    background-color: black;
+    font-size: 20px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border: none;
+}
+.mainContainer{
+    width: 100%;
+    /* box-sizing: border-box; */
+    min-height : 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: "Lora", serif;
+}
+.titleContainer{
+    /* background-color: aqua; */
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    gap: 20px;
+}
+.headingTitle a{
+    color: black;
+}
+.websitePara{
+    text-align: center;
+    /* background-color: rgb(224, 149, 52); */
+}
+.blogsContainer{
+    width: 80%;
+    min-height: 70vh;
+    /* background-color: mistyrose; */
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 50px;
+    padding: 50px 0px;
+}
+
+.blogCard{
+    width: 360px;
+    height: 360px;
+    /* border: 2px solid black; */
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 0 5px rgb(186, 186, 186);
+    padding: 30px;
+    font-family:Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+.blogTitle{
+    font-size: 18px;
+    color: rgb(86, 86, 86);
+    font-weight: 600;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.blogBody{
+    height: 80px;
+}
+.blogBodyText{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.reactionBox{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.tagBox{
+    max-width: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    overflow: hidden;
+}
+.tagSpan{
+    background-color: #fe9900;
+    padding: 5px 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    color: white;
+    text-transform: uppercase;
+    box-sizing: border-box;
+    height: 30px;
+}
+.readBtn{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 4px;
+    width: 100px;
+    height: 40px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.pagination{
+    padding: 10px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.pagination > span{
+    border: 1px solid black;
+    width: 35px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.arrows{
+    font-size: 20px;
+}
+.selectedPage{
+    background-color: #fe9900;
+    color: white;
+    border-color: white;
+}

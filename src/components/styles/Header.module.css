@@ -1,0 +1,169 @@
+header{
+    position: relative;
+    z-index: 2;
+}
+.container{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 10px rgb(215, 214, 214);
+    font-family: "Poppins", sans-serif;
+}
+.linksContainer{
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    font-weight: 500;
+    /* background-color: white;
+    z-index: 3; */
+
+}
+
+.logoName{
+    margin: 0px 100px;
+}
+nav{
+    margin-right: 100px;
+}
+ul{
+    display: flex;
+    gap: 3.2rem;
+    list-style-type: none;
+}
+.link{ 
+    font-size: 18px;
+    text-decoration: none;
+    color : black;
+}
+.createBlog{
+    background-color: #ffaf36;
+    padding: 5px 8px;
+    font-size: 12px;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    text-decoration: none;
+    gap: 4px;
+}
+.hamburgerMenu {
+    /* position: relative; */
+    display: none;
+    margin-right: 30px;
+}
+
+.hamburgerIcon {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menuItems {
+    width: 100vw;
+    background-color: #ffffff;
+    padding: 10px;
+}
+.menuItemsHidden{
+    display: none;
+}
+.menuItems a {
+    display: block;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    background-color: #ffffff;
+    border-bottom: 1px solid gray;
+}
+.menuItems a:last-child{
+    border-bottom: none;
+}
+.menuItems a:hover {
+    background-color: #cac9c9;
+}
+.userSpan{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    background-color: rgba(208, 208, 208, 0.511);
+    padding: 0 10px;
+    border-radius: 20px;
+}
+.ulLinksContainer{
+    display: flex;
+    align-items: center;
+}
+.userIcon{
+    margin-top: 5px;
+    font-size: 20px;
+}
+.logo{
+    font-size: 22px;
+}
+@media only screen and (max-width : 1110px){
+    nav{
+        margin-right: 30px;
+    }
+    ul{
+        gap: 1.2rem;
+    }
+    .link{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width : 810px){
+    .logoName{
+        margin: 0px 100px 0px 30px;
+    }
+}
+@media only screen and (max-width : 730px){
+    .link{
+        font-size: 15px;
+    }
+    footer, .logo{
+        font-size: 18px;
+    }
+}
+@media only screen and (max-width : 660px){
+    .userSpan{
+        background-color: white;
+    }
+    .container{
+        height: max-content;
+    }
+    .hamburgerMenu{
+        display: block;
+    }
+    nav{
+        display: none;
+        margin: 0px auto;
+    }
+    .logoName{
+        margin: 0px auto;
+    }
+    ul{
+        gap: 10px;
+    }
+}
+@media only screen and (min-width : 660px){
+    .menuItems{
+        display: none;
+    }
+}
+@media only screen and (max-width : 500px){
+    .link{
+        font-size: 12px;
+        margin: 0px auto;
+    }
+    footer, .logo{
+        font-size: 15px;
+    }
+}
+@media only screen and (max-width : 340px){
+    ul{
+        gap: 8px;
+        flex-wrap: wrap;
+    }
+}

@@ -1,0 +1,160 @@
+.container{
+    height: calc(100vh - 130px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.sectionRegistration{
+    position: relative;
+    width: 100vw;
+}
+.registrationImage{
+    width: 500px;
+}
+.mainHeading::before {
+    content: ''; 
+    height: 4px; 
+    width: 70%; 
+    width: 40px; 
+    background: black;
+    position: absolute;
+    left: 0;
+    bottom: 7px; 
+}
+.mainHeading{
+    position: relative;
+    z-index: 2;
+}
+.registrationImage img{
+    width: 100%;
+}
+.registrationForm {
+    width: 500px;
+    height: 450px;
+    border-radius: 10px ;
+    box-shadow: 0 0 10px rgb(158, 156, 156);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.registrationForm form{
+    width: 80%;
+    text-align: center;
+    box-sizing: border-box;
+}
+.registrationForm form input{
+    width: 250px;
+    height: 40px;
+    padding: 0px 10px;
+    font-family: "Poppins", sans-serif;
+    border-radius: 7px;
+}
+.registrationForm form div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0px;
+}
+.submitBtn{
+    width: 300px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+}
+.inputNumber::-webkit-outer-spin-button,
+.inputNumber::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+@media only screen and (max-width:1200px) {
+    .registrationImage{
+        width: 400px;
+    }
+}
+@media only screen and (max-width:1110px) {
+    .registrationForm{
+        width: 400px;
+        height: 300px;
+    }
+    .mainHeading{
+        font-size: 25px;
+    }
+    .mainHeading::after {
+        width: 28px; 
+        bottom: 5px; 
+    }
+    .registrationForm form input{
+        width: 200px;
+        height: 30px;
+    }
+    .submitBtn{
+        width: 100px;
+        height: 28px;
+        font-size: 16px;
+    }
+}
+@media only screen and (max-width: 950px) {
+    .registrationImage{
+        width: 300px;
+    }
+}
+@media only screen and (max-width: 800px){
+    .container{
+        flex-direction: column;
+        gap: 40px;
+         padding-top: 30px;
+        height: max-content;
+        margin-bottom: 40px;
+    }
+}
+@media only screen and (max-width: 470px){
+    .registrationForm{
+        width: 350px;
+        /* height: 250px; */
+    }
+    .registrationForm form input{
+        width: 170px;
+        height: 30px;
+    }
+    .registrationForm form label{
+        font-size: 15px;
+    }
+    .submitBtn{
+        font-size: 14px;
+        width: 80px;
+    }
+}
+@media only screen and (max-width: 390px){
+    .registrationImage{
+        width: 70vw;
+    }
+    .registrationForm{
+        width: 80vw;
+        /* height: 300px; */
+        height: max-content;
+        padding: 20px 0px;
+    }
+    .registrationForm form div{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .registrationForm form input{
+        width: 90%;
+    }
+    .mainHeading{
+        font-size: 20px;
+    }
+    .mainHeading::after {
+        width: 23px; 
+        bottom: 3px; 
+    }
+    .submitBtn{
+        font-size: 12px;
+        width: 70px;
+    }
+}
