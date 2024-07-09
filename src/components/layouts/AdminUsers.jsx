@@ -8,7 +8,7 @@ const AdminUsers = () => {
     const [users, setUsers] = useState([])
     const getAllUsersData = async () => {
         try{
-            const response = await fetch("http://localhost:5000/api/admin/users", {
+            const response = await fetch("https://blogadda-api.vercel.app/api/admin/users", {
                 method : "GET",
                 headers : {
                     "Authorization" : AuthorizationToken,
@@ -24,7 +24,7 @@ const AdminUsers = () => {
     const deleteUser = async (id) => {
             try{
 
-                const response = await fetch(`http://localhost:5000/api/admin/users/delete/${id}`, {
+                const response = await fetch(`https://blogadda-api.vercel.app/api/admin/users/delete/${id}`, {
                     method : "DELETE",
                     headers : {
                         "Authorization" : AuthorizationToken,
@@ -41,7 +41,7 @@ const AdminUsers = () => {
         }
     const editUser = async (id) => {
         try{
-            const response = await fetch(`http://localhost:5000/api/admin/users/${id}/edit`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/admin/users/${id}/edit`, {
                 method : "GET",
                 headers : {
                     "Authorization" : AuthorizationToken,

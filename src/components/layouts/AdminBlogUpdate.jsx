@@ -17,7 +17,7 @@ const AdminBlogUpdate = () => {
     })
     const getSingleBlogData = async () => {
         try{
-            const response = await fetch(`http://localhost:5000/api/admin/blogs/${params.id}/edit`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/admin/blogs/${params.id}/edit`, {
                 method : "GET",
                 headers : {
                     "Authorization" :  AuthorizationToken,
@@ -49,7 +49,7 @@ const AdminBlogUpdate = () => {
     const handleSubmit = async () => {
         event.preventDefault();
         try{
-            const response = await fetch(`http://localhost:5000/api/admin/blogs/update/${params.id}`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/admin/blogs/update/${params.id}`, {
                 method : "PATCH",
                 headers : {
                     "Authorization" : AuthorizationToken,

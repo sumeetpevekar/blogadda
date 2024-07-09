@@ -37,7 +37,7 @@ const CreateBlog = () => {
         console.log("clicked")
         console.log(blogData)
         try{
-            const response = await fetch("http://localhost:5000/api/user/blogs/post", {
+            const response = await fetch("https://blogadda-api.vercel.app/api/user/blogs/post", {
                 method : "POST",
                 headers : {
                     "Content-Type": "application/json",

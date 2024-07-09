@@ -16,7 +16,7 @@ const AdminUserUpdate = () => {
     console.log(params.id);
     const getSingleUserData = async () => {
         try{
-            const response = await fetch(`http://localhost:5000/api/admin/users/${params.id}/edit`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/admin/users/${params.id}/edit`, {
                 method : "GET",
                 headers : {
                     "Authorization" :  AuthorizationToken,
@@ -44,7 +44,7 @@ const AdminUserUpdate = () => {
     const handleSubmit = async () => {
         event.preventDefault();
         try{
-            const response = await fetch(`http://localhost:5000/api/admin/users/update/${params.id}`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/admin/users/update/${params.id}`, {
                 method : "PATCH",
                 headers : {
                     "Authorization" : AuthorizationToken,

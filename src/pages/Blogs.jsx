@@ -14,7 +14,7 @@ const Blogs = () => {
     const [loaded, setLoaded] = useState(true);
     const getSingleBlogData = async () => {
         try{
-            const response = await fetch(`http://localhost:5000/api/user/blogs/read/${singleBlog}`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/user/blogs/read/${singleBlog}`, {
                 method : "GET",
             })
             const {message} = await response.json();
@@ -43,7 +43,7 @@ const Blogs = () => {
     const handleReactionClick = async () => {
         try {
             // Send a request to your backend to update the reaction count
-            const res = await fetch(`http://localhost:5000/api/user/blogs/${blog._id}/reactions`, {
+            const res = await fetch(`https://blogadda-api.vercel.app/api/user/blogs/${blog._id}/reactions`, {
                 method: "POST",
                 headers : {
                     "Content-Type": "application/json",

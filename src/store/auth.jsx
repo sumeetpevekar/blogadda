@@ -40,7 +40,7 @@ const AuthProvider = ({children}) => {
     const userAuthentication = async () => {
         try{
             setIsLoading(true);
-            const response = await fetch("http://localhost:5000/api/auth/user", {
+            const response = await fetch("https://blogadda-api.vercel.app/api/auth/user", {
                 method : "GET",
                 headers : {
                     Authorization: AuthorizationToken
@@ -63,7 +63,7 @@ const AuthProvider = ({children}) => {
     // fetch blogs  data from the databse
     const getBlogsData = async () => {
         try{
-            const response = await fetch("http://localhost:5000/api/user/blogs", {
+            const response = await fetch("https://blogadda-api.vercel.app/api/user/blogs", {
                 method : "GET",
             })
             const {message} = await response.json();
@@ -76,7 +76,7 @@ const AuthProvider = ({children}) => {
     // fetch user blogs  data from the databse
     const getUsersBlogs = async () => {
         try{    
-            const response = await fetch(`http://localhost:5000/api/user/blogs/${user.username}/get`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/user/blogs/${user.username}/get`, {
                 method: "GET",
                 headers : {
                     "Authorization" : AuthorizationToken,

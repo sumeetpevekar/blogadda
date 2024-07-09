@@ -39,7 +39,7 @@ const UserProfile = () => {
         updatedDeleteIcons[index] = !updatedDeleteIcons[index];
         setOpenDeleteIcons(updatedDeleteIcons);
         try{
-            const response = await fetch(`http://localhost:5000/api/user/blogs/delete/${id}`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/user/blogs/delete/${id}`, {
                 method : "DELETE",
                 headers : {
                     "Authorization" : AuthorizationToken,

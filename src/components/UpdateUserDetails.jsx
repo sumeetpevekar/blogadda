@@ -34,7 +34,7 @@ const UpdateUserDetails = () => {
     const handleSubmit = async () => {
         event.preventDefault();
         try{
-            const response = await fetch(`http://localhost:5000/api/user/update-user-details/${user._id}`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/user/update-user-details/${user._id}`, {
                 method : "PATCH",
                 headers : {
                     "Content-Type": "application/json",

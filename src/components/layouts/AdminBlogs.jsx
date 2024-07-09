@@ -9,7 +9,7 @@ const AdminBlogs = () => {
 
     const getAllBlogsData = async () => {
         try{
-            const response = await fetch("http://localhost:5000/api/admin/blogs", {
+            const response = await fetch("https://blogadda-api.vercel.app/api/admin/blogs", {
                 method : "GET",
                 headers : {
                     "Authorization" : AuthorizationToken,
@@ -25,7 +25,7 @@ const AdminBlogs = () => {
     const deleteBlog = async (id) => {
             try{
 
-                const response = await fetch(`http://localhost:5000/api/admin/blogs/delete/${id}`, {
+                const response = await fetch(`https://blogadda-api.vercel.app/api/admin/blogs/delete/${id}`, {
                     method : "DELETE",
                     headers : {
                         "Authorization" : AuthorizationToken,
@@ -43,7 +43,7 @@ const AdminBlogs = () => {
         }
     const editBlog = async (id) => {
         try{
-            const response = await fetch(`http://localhost:5000/api/admin/users/${id}/edit`, {
+            const response = await fetch(`https://blogadda-api.vercel.app/api/admin/users/${id}/edit`, {
                 method : "GET",
                 headers : {
                     "Authorization" : AuthorizationToken,

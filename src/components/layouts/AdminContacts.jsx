@@ -9,7 +9,7 @@ const AdminContacts = () => {
     const [messages, setMessages] = useState([])
     const getAllContactsData = async () => {
         try{
-            const response = await fetch("http://localhost:5000/api/admin/contacts", {
+            const response = await fetch("https://blogadda-api.vercel.app/api/admin/contacts", {
                 method : "GET",
                 headers : {
                     "Authorization" : AuthorizationToken,
@@ -25,7 +25,7 @@ const AdminContacts = () => {
     const deleteMessage = async (id) => {
             try{
 
-                const response = await fetch(`http://localhost:5000/api/admin/contacts/delete/${id}`, {
+                const response = await fetch(`https://blogadda-api.vercel.app/api/admin/contacts/delete/${id}`, {
                     method : "DELETE",
                     headers : {
                         "Authorization" : AuthorizationToken,
