@@ -21,7 +21,7 @@ const Contact = () => {
         setUserData(false)
     }
     const handleInput = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         let name = e.target.name;
         let value = e.target.value;
         setContactUser({...contactUser, 
@@ -29,9 +29,9 @@ const Contact = () => {
         })
     }
     const handleSubmit = async (event) => {
-        console.log(event)
+        // console.log(event)
         event.preventDefault();
-        console.log(contactUser)
+        // console.log(contactUser)
         try{
             const response = await fetch("https://blogadda-api.vercel.app/api/form/contact", {
                 method : "POST",
@@ -40,9 +40,9 @@ const Contact = () => {
                 },
                 body : JSON.stringify(contactUser),
             })
-            console.log(response); 
+            // console.log(response); 
             const data = await response.json();
-            console.log(data)
+            // console.log(data)
             if(response.ok){
                 setContactUser({
                     username : "",

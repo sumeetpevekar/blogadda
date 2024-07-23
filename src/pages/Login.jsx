@@ -18,7 +18,7 @@ const Login = () => {
         setOpen(!open);
     }
     const handleInput = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         let name = e.target.name;
         let value = e.target.value;
         setLoginUser({...loginUser, 
@@ -27,9 +27,9 @@ const Login = () => {
     }
     const navigate = useNavigate()
     const handleSubmit = async (event) => {
-        console.log(event)
+        // console.log(event)
         event.preventDefault();
-        console.log(loginUser)
+        // console.log(loginUser)
         try{
             const response  = await fetch("https://blogadda-api.vercel.app/api/auth/login", {
                 method : "POST",
@@ -39,7 +39,7 @@ const Login = () => {
                 body: JSON.stringify(loginUser),
             })
             const data = await response.json();
-            console.log(response)
+            // console.log(response)
             if(response.ok){
                 setLoginUser({
                     emailOrUsername  : "",
@@ -52,7 +52,7 @@ const Login = () => {
                 toast.warning(data.extraDetails ? data.extraDetails : data.message)
                 return;
             }
-            console.log(response);
+            // console.log(response);
         }catch(error){
             console.log(error)
         }

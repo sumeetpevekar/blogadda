@@ -16,7 +16,7 @@ const AdminContacts = () => {
                 }
             })
             const {message} = await response.json();
-            console.log(message)
+            // console.log(message)
             setMessages(message);
         }catch(error){
             console.log(error);
@@ -32,7 +32,7 @@ const AdminContacts = () => {
                     }
                 })
                 const data = await response.json();
-                console.log(data)
+                // console.log(data)
                 if(response.ok){
                     toast.success("Deleted successfully")
                     getAllContactsData();

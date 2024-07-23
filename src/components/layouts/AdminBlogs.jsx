@@ -16,7 +16,7 @@ const AdminBlogs = () => {
                 }
             })
             const {message} = await response.json();
-            console.log(message)
+            // console.log(message)
             setBlogs(message.reverse());
         }catch(error){
             console.log(error);
@@ -32,7 +32,7 @@ const AdminBlogs = () => {
                     }
                 })
                 const data = await response.json();
-                console.log(data)
+                // console.log(data)
                 if(response.ok){
                     getAllBlogsData();
                     getBlogsData();
@@ -50,11 +50,11 @@ const AdminBlogs = () => {
                 },
             })
             const data = await response.json();
-            console.log(response)
+            // console.log(response)
         }catch(error){
             console.log(error);
         }
-            console.log(JSON.stringify(id));
+            // console.log(JSON.stringify(id));
         }
     useEffect(() => {
         getAllBlogsData();

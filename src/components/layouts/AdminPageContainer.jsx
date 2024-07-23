@@ -7,10 +7,6 @@ import { useAuth } from "../../store/auth";
 
 const AdminContainer = () => {
     const [active, setActive] = useState(false)
-    const {user} = useAuth();
-    if(!user.isAdmin){
-        return <Navigate to="/" />
-    }
     const toggleMenu = () => {
         setActive(!active)
     }

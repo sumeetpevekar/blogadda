@@ -1,6 +1,6 @@
 .container{
     width: 100%;
-    height: calc(100vh - 130px);
+    min-height: calc(100vh - 130px);
     /* background-color: aliceblue; */
     display: flex;
     justify-content: center;
@@ -9,9 +9,10 @@
 .cardContainer{
     width: 80%;
     height: 80%;
+    margin: 40px 0px;
     /* background-color: antiquewhite; */
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     justify-content: center;
     box-shadow: 0 0 5px rgb(199, 199, 199);
 }
@@ -55,7 +56,6 @@
 .recentBlogs{
     /* background-color: rgb(255, 208, 208); */
     border-bottom: 1px solid rgb(202, 202, 202);
-    height: 80px;
     padding: 15px 20px;
     display: flex;
     flex-direction: column;
@@ -73,13 +73,11 @@
     gap: 10px;
 }
 .recentBlogs div:nth-child(1){
-    width: 100%;
-    height: 40px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
-    white-space: nowrap;
-    font-weight: 400;
-    display: block;
 }
 .blogTagsContainer{
     display: flex;
@@ -93,4 +91,93 @@
 
 .emojiLiked{
     color: #fe9900;
+}
+@media only screen and (max-width : 1000px){
+    .cardContainer{
+        width: 90%;
+    }
+    .blogDetailsContainer{
+        padding: 20px 20px;
+        align-items:flex-start;
+        font-size: 13px;
+        gap: 10px;
+    }
+    .blogTitle{
+        font-size: 18px;
+    }
+    .blogBody{
+        font-size: 14px;
+    }
+    .tags{
+        font-size: 13px;
+    }
+    .recentBlogsContainer{
+        padding: 20px 20px;
+    }
+    .recentBlogHeading{
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    .recentBlogs{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width : 600px){
+    .cardContainer{
+        width: 90%;
+    }
+    .blogDetailsContainer{
+        font-size: 12px;
+    }
+    .blogTitle{
+        font-size: 15px;
+    }
+    .blogBody{
+        font-size: 13px;
+    }
+    .tags{
+        font-size: 11px;
+    }
+    .recentBlogsContainer{
+        padding: 20px 20px;
+    }
+    .recentBlogHeading{
+        font-size: 15px;
+        padding-bottom: 10px;
+    }
+    .recentBlogs{
+        font-size: 13px;
+    }
+}
+@media only screen and (max-width : 500px){
+    .cardContainer{
+        width: 90%;
+        flex-direction: column;
+    }
+    .blogDetailsContainer{
+        font-size: 12px;
+        width: 100%;
+    }
+    .blogTitle{
+        font-size: 15px;
+    }
+    .blogBody{
+        font-size: 13px;
+    }
+    .tags{
+        font-size: 11px;
+    }
+    .recentBlogsContainer{
+        padding: 20px 20px;
+        width: 100%;
+        border-left: 0px ;
+        border-top: 1px solid gray;
+    }
+    .recentBlogHeading{
+        font-size: 18px;
+        padding-bottom: 10px;
+    }
+    .recentBlogs{
+        font-size: 13px;
+    }
 }

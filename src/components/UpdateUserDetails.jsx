@@ -11,7 +11,7 @@ const UpdateUserDetails = () => {
     if(!token){
         navigate("/")
     }
-    console.log(user)
+    // console.log(user)
     const [data, setData] = useState({
         name : "",
         username : "",
@@ -28,7 +28,7 @@ const UpdateUserDetails = () => {
             ...data,
             [name] : value,
         })
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
 
     const handleSubmit = async () => {
@@ -43,8 +43,8 @@ const UpdateUserDetails = () => {
                 body : JSON.stringify(data)
             })
             const gettingResponse = await response.json();
-            console.log(gettingResponse)
-            console.log(response)
+            // console.log(gettingResponse)
+            // console.log(response)
             if(response.ok){
                 toast.success("Updated successfully")
                 navigate("/my/profile")

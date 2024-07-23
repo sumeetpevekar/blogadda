@@ -52,7 +52,7 @@ const AuthProvider = ({children}) => {
                 setUser(userData);
                 setIsLoading(false);
             }else{
-                console.log("Error fetching user data")
+                // console.log("Error fetching user data")
                 setIsLoading(false);
             }
         }catch(error){
@@ -67,7 +67,7 @@ const AuthProvider = ({children}) => {
                 method : "GET",
             })
             const {message} = await response.json();
-            console.log(message)
+            // console.log(message)
             setBlogs(message)
         }catch(error){
             console.log(error)
@@ -85,7 +85,7 @@ const AuthProvider = ({children}) => {
             const data = await response.json();
             // console.log(data)
             const blogData = data.message;
-            console.log(blogData)
+            // console.log(blogData)
             if(response.ok){
                 setUserBlogs(blogData);
             }
@@ -105,17 +105,17 @@ const AuthProvider = ({children}) => {
             item.body.toLowerCase().includes(searchValue) || item.title.toLowerCase().includes(searchValue)
         );
         setFilteredList(searchList);
-        console.log("called", searchValue);
+        // console.log("called", searchValue);
     }
 
     const loadFilteredList = () => {
-        console.log(searchedBlog);
+        // console.log(searchedBlog);
         const searchList = sortedBlogs.filter((item) =>
             item.body.toLowerCase().includes(searchedBlog) || item.title.toLowerCase().includes(searchedBlog)
         );
         setFilteredList(searchList);
         // console.log(filteredList);
-        console.log("called");
+        // console.log("called");
     }
    useEffect(() => { 
         loadFilteredList();

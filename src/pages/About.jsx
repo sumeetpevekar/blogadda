@@ -8,7 +8,7 @@ const About = () => {
                     <div className={`${styles.container}`}>
                         <div className={`${styles.aboutPara}`}>
                             {user ?  <p>Hello {user.username}</p> : ""}
-                            <h1 >Welcome to Blog Adda</h1>
+                            <h1 className={`${styles.heading}`}>Welcome to Blog Adda</h1>
                             <br />
                             <div>
                             Your ultimate destination for insightful content and engaging discussions! At Blogs Adda, we're passionate about creating a platform where readers can discover enriching articles, ranging from lifestyle and wellness to technology and beyond. 

@@ -18,5 +18,35 @@
     width: 600px;
     padding-top: 40px;
     /* height: 350px; */
-    border-radius: 10px ;
+}
+@media only screen and (max-width: 1100px) {
+    .aboutImage{
+        width: 450px;
+    }
+}
+@media only screen and (max-width: 1100px){
+    .container{
+        flex-direction: column;
+        gap: 40px;
+         padding-top: 30px;
+        height: max-content;
+        margin-bottom: 40px;
+        align-items: center;
+    }
+    .aboutPara{
+        width: 90%;
+    }
+}
+@media only screen and (max-width: 600px){
+   .aboutPara{
+    font-size: 13px;
+   } 
+   .heading{
+    font-size: 18px;
+   }
+}
+@media only screen and (max-width: 470px){
+    .aboutImage{
+        width: 80%;
+    }
 }

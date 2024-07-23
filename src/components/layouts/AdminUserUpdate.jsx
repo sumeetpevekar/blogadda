@@ -13,7 +13,7 @@ const AdminUserUpdate = () => {
     })
     const {AuthorizationToken} = useAuth();
     const params = useParams();
-    console.log(params.id);
+    // console.log(params.id);
     const getSingleUserData = async () => {
         try{
             const response = await fetch(`https://blogadda-api.vercel.app/api/admin/users/${params.id}/edit`, {
@@ -23,7 +23,7 @@ const AdminUserUpdate = () => {
                 }
             })
             const {message} = await response.json();
-            console.log(message)
+            // console.log(message)
             setData(message)
         }catch(err){
             console.log(err)
@@ -39,7 +39,7 @@ const AdminUserUpdate = () => {
             ...data,
             [name] : value,
         })
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
     const handleSubmit = async () => {
         event.preventDefault();

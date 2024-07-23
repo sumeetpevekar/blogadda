@@ -13,6 +13,7 @@ header{
     width: 100vw;
     display: flex;
     justify-content: space-between;
+    position: relative;
     align-items: center;
     height: 80px;
     font-weight: 500;
@@ -40,8 +41,7 @@ ul{
 .createBlog{
     background-color: #ffaf36;
     padding: 5px 8px;
-    font-size: 12px;
-    border-radius: 5px;
+    border-radius: 5px; 
     color: white;
     display: flex;
     align-items: center;
@@ -86,6 +86,7 @@ ul{
 .userSpan{
     display: flex;
     align-items: center;
+    /* justify-content: flex-start; */
     gap: 3px;
     background-color: rgba(208, 208, 208, 0.511);
     padding: 0 10px;
@@ -100,7 +101,7 @@ ul{
     font-size: 20px;
 }
 .logo{
-    font-size: 22px;
+    font-size: 22px ;
 }
 @media only screen and (max-width : 1110px){
     nav{
@@ -113,14 +114,34 @@ ul{
         font-size: 18px;
     }
 }
+@media only screen and (max-width : 850px){
+    .logoName{
+        margin-left: 30px;
+    }
+    .logo{
+        font-size: 18px;
+    }
+}
 @media only screen and (max-width : 810px){
     .logoName{
-        margin: 0px 100px 0px 30px;
+        margin-left: 30px;
+    }
+    ul{
+        gap: 10px;
+    }
+    .link{
+        font-size: 14px;
+    }
+    .createBlog{
+        font-size: 14px;
+    }
+    .logo{
+        font-size: 18px;
     }
 }
 @media only screen and (max-width : 730px){
     .link{
-        font-size: 15px;
+        font-size: 14px;
     }
     footer, .logo{
         font-size: 18px;
@@ -129,6 +150,10 @@ ul{
 @media only screen and (max-width : 660px){
     .userSpan{
         background-color: white;
+        padding: 0px;
+    }
+    .createBlog{
+        font-size: 15px;
     }
     .container{
         height: max-content;
@@ -146,6 +171,9 @@ ul{
     ul{
         gap: 10px;
     }
+    .linksContainer{
+        height: 60px;
+    }
 }
 @media only screen and (min-width : 660px){
     .menuItems{
@@ -161,9 +189,17 @@ ul{
         font-size: 15px;
     }
 }
+@media only screen and (max-width : 400px){
+    .linksContainer{
+        height: 50px;
+    }
+}
 @media only screen and (max-width : 340px){
     ul{
         gap: 8px;
         flex-wrap: wrap;
+    }
+    .linksContainer{
+        height: 40px;
     }
 }

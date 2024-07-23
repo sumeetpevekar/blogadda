@@ -8,23 +8,25 @@ import { MdAddReaction, MdOutlineAddReaction } from "react-icons/md";
 import { GoKebabHorizontal } from "react-icons/go";
 import { HiMiniXMark } from "react-icons/hi2";
 import { toast } from "react-toastify";
+import { RiAdminLine } from "react-icons/ri";
 const UserProfile = () => {
     const {user, token, AuthorizationToken, storeBlogIdTokenInLocale, userBlogs, getUsersBlogs, getBlogsData} = useAuth();
     const username = user.username;
+    // console.log(user)
     const navigate = useNavigate();
     const [openDeleteIcons, setOpenDeleteIcons] = useState(Array(userBlogs.length).fill(false));
     if(!token){
         navigate("/")
     }
     const finalBlogs = [...userBlogs].reverse();
-    console.log(userBlogs);
-    console.log(finalBlogs);
+    // console.log(userBlogs);
+    // console.log(finalBlogs);
     useEffect(() => {
         getUsersBlogs();
     }, [])
 
     const setSingleBlogId = (id) => {
-        console.log(id)
+        // console.log(id)
         storeBlogIdTokenInLocale(id)
     }
 
@@ -34,7 +36,7 @@ const UserProfile = () => {
         setOpenDeleteIcons(updatedDeleteIcons);
     };
     const deleteUserBlog = async (id, index) => {
-        console.log(id)
+        // console.log(id)
         const updatedDeleteIcons = [...openDeleteIcons];
         updatedDeleteIcons[index] = !updatedDeleteIcons[index];
         setOpenDeleteIcons(updatedDeleteIcons);
@@ -123,7 +125,10 @@ const UserProfile = () => {
                 }
                 </div>
             </div>
-            <div className={styles.logoutBox}><NavLink className={`${styles.logoutLink}`} to="/logout"><span className={styles.logoutSpan}>Logout <IoIosLogOut /></span></NavLink></div>
+            <div className={styles.actionBox}>
+                {user.isAdmin && <NavLink className={`${styles.actionSpan}`} to="/admin"><span className={styles.actionSpan}>Admin Dashboard <RiAdminLine  /></span></NavLink> }
+                <NavLink className={`${styles.actionSpan}`} to="/logout"><span className={styles.actionSpan}>Logout <IoIosLogOut /></span></NavLink>
+            </div>
         </div>
     )
 }

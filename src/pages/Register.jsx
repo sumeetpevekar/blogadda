@@ -15,7 +15,7 @@ const Register = () => {
         password: "",
     });
     const handleInput = (e) => {
-        console.log(e.target.value)
+        // console.log(e.target.value)
         let name = e.target.name;
         let value = e.target.value;
         setUser({...user, 
@@ -25,8 +25,8 @@ const Register = () => {
     const navigate = useNavigate()
     const handleSubmit = async (event) => {
         event.preventDefault();
-        console.log(event)
-        console.log(user)
+        // console.log(event)
+        // console.log(user)
         if(user.username.includes(" ")){
             return toast.warning("Username cannot include spaces");
         }
@@ -39,8 +39,8 @@ const Register = () => {
                 body : JSON.stringify(user)
             });
             const data = await response.json();
-            console.log(data);
-            console.log(response)
+            // console.log(data);
+            // console.log(response)
             if(response.ok){
                 storeTokenInLocale(data.token);
                 setUser({name : "", username : "", email : "", phone : "", password: ""})

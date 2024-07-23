@@ -53,7 +53,7 @@ const Blogs = () => {
             });
             const data = await res.json();
             data.message === "LIKE" ? setLiked(true) : setLiked(false)
-            console.log(data.message)
+            // console.log(data.message)
             if(res.ok){
                 getSingleBlogData();
                 getBlogsData();

@@ -11,7 +11,7 @@ const CreateBlog = () => {
         return <Navigate to="/register"/>
     }
 
-    console.log(user)
+    // console.log(user)
     const username = user.username;
     // console.log(username)
     const [blogData, setBlogData] = useState({
@@ -34,8 +34,8 @@ const CreateBlog = () => {
     }
     const handleSubmit = async () => {
         event.preventDefault();
-        console.log("clicked")
-        console.log(blogData)
+        // console.log("clicked")
+        // console.log(blogData)
         try{
             const response = await fetch("https://blogadda-api.vercel.app/api/user/blogs/post", {
                 method : "POST",

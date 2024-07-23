@@ -33,3 +33,9 @@ header, footer{
   /* background-color: antiquewhite; */
   box-shadow: 0 0 5px ghostwhite;
 }
+@media only screen and (max-width : 340px){
+  footer{
+      font-size: 10px;
+      height: max-content;
+}
+}

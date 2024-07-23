@@ -13,7 +13,7 @@ const UserBlogUpdate = () => {
     })
     const navigate = useNavigate()
     const params = useParams();
-    console.log(params.id);
+    // console.log(params.id);
     const getUserBlogEditData = async () => {
         try{
             const response = await fetch(`https://blogadda-api.vercel.app/api/user/blogs/${params.id}/edit`, {
@@ -23,7 +23,7 @@ const UserBlogUpdate = () => {
                 }
             })
             const {message} = await response.json();
-            console.log(message)
+            // console.log(message)
             setBlog(message)
         }catch(err){
             console.log(err)
@@ -42,7 +42,7 @@ const UserBlogUpdate = () => {
         } else {
             setBlog({ ...blog, [name]: value });
         }
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
     const handleSubmit = async () => {
         event.preventDefault();
@@ -65,7 +65,7 @@ const UserBlogUpdate = () => {
         }catch(err){
             console.log(err)
         }
-        console.log(blog)
+        // console.log(blog)
     }
     return (
         <section className={styles.mainContainer}>

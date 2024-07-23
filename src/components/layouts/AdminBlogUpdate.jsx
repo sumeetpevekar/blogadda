@@ -8,7 +8,7 @@ const AdminBlogUpdate = () => {
     const {AuthorizationToken} = useAuth();
     const params = useParams();
     const navigate = useNavigate()
-    console.log(params.id);
+    // console.log(params.id);
     const [blog, setBlog] = useState({
         username : "",
         title : "",
@@ -24,7 +24,7 @@ const AdminBlogUpdate = () => {
                 }
             })
             const {message} = await response.json();
-            console.log(message)
+            // console.log(message)
             setBlog(message)
         }catch(err){
             console.log(err)
@@ -44,7 +44,7 @@ const AdminBlogUpdate = () => {
         } else {
             setBlog({ ...blog, [name]: value });
         }
-        console.log(e.target.value)
+        // console.log(e.target.value)
     }
     const handleSubmit = async () => {
         event.preventDefault();
@@ -66,7 +66,7 @@ const AdminBlogUpdate = () => {
         }catch(err){
             console.log(err)
         }
-        console.log(blog)
+        // console.log(blog)
     }
     return (
         <section className={styles.mainContainer}>
