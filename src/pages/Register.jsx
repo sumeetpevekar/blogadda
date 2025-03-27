@@ -20,7 +20,7 @@ const Register = () => {
         let name = e.target.name;
         let value = e.target.value;
         setUser({...user, 
-            [name] : value.trim(),
+            [name] : value,
         })
     }
     const navigate = useNavigate()
