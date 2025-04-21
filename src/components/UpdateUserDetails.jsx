@@ -67,11 +67,11 @@ const UpdateUserDetails = () => {
                 <label htmlFor="name">Full Name</label>
                 <input  onChange={handleInput} value={data.name} className={styles.input}  type="text" name="name" id="name"/>
                 <label htmlFor="username">Username</label>
-                <input onChange={handleInput} readOnly value={data.username} className={styles.input}  type="text" name="username" id="username"/>
+                <input onChange={handleInput} readOnly disabled value={data.username} className={styles.input}  type="text" name="username" id="username"/>
                 <label htmlFor="phone">Mobile Number</label>
                 <input  onChange={handleInput} value={data.phone}  className={`${styles.input} ${styles.inputNumber}`}  type="number" name="phone" id="phone"/>
                 <label htmlFor="email">Email ID</label>
-                <input onChange={handleInput} readOnly value={data.email} className={styles.input}  type="email" name="email" id="email"/>
+                <input onChange={handleInput} readOnly disabled value={data.email} className={styles.input}  type="email" name="email" id="email"/>
                 <button type="submit" className={styles.editBtn}>Save Details</button>
                 </form>
             </div>

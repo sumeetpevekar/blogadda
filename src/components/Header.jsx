@@ -33,7 +33,7 @@ const Header = () => {
                         <li><NavLink className={`${styles.link}`} aria-label="Go to the About Page" to="/about">About</NavLink></li>
                         <li><NavLink className={`${styles.link}`} aria-label="Go to the Contact Page" to="/contact">Contact</NavLink></li>
                         {isLoggedIn ? 
-                            <NavLink className={`${styles.link}`}  aria-label="Go to the User Profile Page" to="/my/profile"><span className={styles.userSpan}><span className={styles.userIcon}><HiOutlineUserCircle /></span> <span>{userName[0]}</span></span> </NavLink>
+                            <NavLink className={`${styles.link}`}  aria-label="Go to the User Profile Page" to="/my/profile"><span className={styles.userSpan}><span className={styles.userIcon}>{user?.picture ? <img style={{borderRadius: "50%"}} src={user.picture} alt="mdo" width="38" height="38" class="rounded-circle"></img> : <HiOutlineUserCircle />}</span> <span>{userName[0]}</span></span> </NavLink>
                             : <>
                             <NavLink className={`${styles.link}`} aria-label="Go to the Register Page" to="/register">Register</NavLink>
                             <NavLink className={`${styles.link}`} aria-label="Go to the Login Page" to="/login">Login</NavLink> 
@@ -53,7 +53,7 @@ const Header = () => {
                     <NavLink className={`${styles.link}`} aria-label="Go to the Contact Page" onClick={toggleMenu} to="/contact">Contact</NavLink>
                     {isLoggedIn && <NavLink className={`${styles.link, styles.createBlog}`} onClick={toggleMenu} to="/create-blog">Create Blog <FaPencilAlt /></NavLink>}
                     {isLoggedIn ? 
-                     <NavLink className={`${styles.link}`} aria-label="Go to the User Profile Page" onClick={toggleMenu} to="/my/profile"><div className={styles.userSpan}><span className={styles.userIcon}><HiOutlineUserCircle /></span><span>{userName[0]}</span></div> </NavLink> :
+                    <NavLink className={`${styles.link}`} aria-label="Go to the User Profile Page" onClick={toggleMenu} to="/my/profile"><div className={styles.userSpan}><span className={styles.userIcon}>{user?.picture ? <img style={{borderRadius: "50%"}} src={user.picture} alt="mdo" width="30" height="30" class="rounded-circle"></img> : <HiOutlineUserCircle />}</span><span>{userName[0]}</span></div> </NavLink> :
                     <>
                     <NavLink className={`${styles.link}`} aria-label="Go to the Register Page" onClick={toggleMenu} to="/register">Register</NavLink>
                     <NavLink className={`${styles.link}`} aria-label="Go to the Login Page" onClick={toggleMenu} to="/login">Login</NavLink> 

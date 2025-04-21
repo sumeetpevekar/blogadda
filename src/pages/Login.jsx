@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "../components/styles/Login.module.css"
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../store/auth";
@@ -7,9 +7,13 @@ import 'react-toastify/dist/ReactToastify.css';
 import { FaUser } from "react-icons/fa";
 import { FaLock } from "react-icons/fa";
 import { FaRegEyeSlash, FaRegEye  } from "react-icons/fa";
+import { useGoogleLogin } from '@react-oauth/google'
+
 const Login = () => {
     const {storeTokenInLocale} = useAuth();
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(false);
+    const [errorInfo, setErrorInfo] = useState(null);
+    const [authInfo, setAuthInfo] = useState(null);
     const [loginUser, setLoginUser] = useState({
         emailOrUsername: "",
         password: "",
@@ -57,6 +61,48 @@ const Login = () => {
             console.log(error)
         }
     }
+    const googleAuth = useGoogleLogin({
+        onSuccess : (response) => setAuthInfo(response),
+        onError : (error) => setErrorInfo(error)
+    });
+    const googleLogin = async (data) => {
+        const res = await fetch("https://blogadda-api.vercel.app/api/auth/googleLogin", {
+            method: "POST",
+            headers: {
+                "Content-Type" : "application/json",
+            },
+            body: JSON.stringify(data)
+        });
+        const response = await res.json();
+        console.log(response);
+        if(res.ok){
+            const token = response.token.replace("Bearer ", "");
+            storeTokenInLocale(token);
+            navigate("/")
+            toast.success("Login successful")
+        }   
+    }
+    const fetchProfileInfo  = async ( ) => {
+        try{
+          const res = await fetch(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${authInfo?.access_token}`, {
+            method: "GET",
+            headers : {
+              Authorization : `Bearer ${authInfo?.access_token}`,
+              Accept: 'application/json',
+            }
+          });
+          const response = await res.json();
+          console.log(response);
+          if(res.ok){
+            googleLogin(response);
+          }
+        }catch(error){
+          console.log(error);
+        }
+      }
+      useEffect(() => {
+        if(authInfo) fetchProfileInfo();
+      }, [authInfo]);
     return (
             <main>
                 <div className={`${styles.sectionLogin}`}>
@@ -79,6 +125,11 @@ const Login = () => {
                                 </div>
                                 <button className={`${styles.submitBtn}`} type="submit">Submit</button>
                             </form>
+                            <div style={{margin: "20px"}}>or</div>
+                            <button className={`${styles.googleButton}`} type="button" onClick={googleAuth}>
+                                <img src="images/google.png" alt="" />
+                                Continue with Google
+                            </button>
                         </div>
                     </div>
                 </div>

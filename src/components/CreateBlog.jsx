@@ -15,7 +15,7 @@ const CreateBlog = () => {
     const username = user.username;
     // console.log(username)
     const [blogData, setBlogData] = useState({
-        username : username,
+        username : username || user.email,
         title : "",
         tags : "",
         body: "",

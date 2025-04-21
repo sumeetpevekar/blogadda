@@ -4,9 +4,11 @@ import App from './App.jsx'
 import './index.css'
 import AuthProvider from './store/auth.jsx'
 import { ToastContainer } from 'react-toastify';
+import {GoogleOAuthProvider} from "@react-oauth/google";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
+    <GoogleOAuthProvider clientId='713275010367-eulnkelr91dop4pc57nlu1df42jfe2rl.apps.googleusercontent.com'>
     <AuthProvider>
       <App></App>
       <ToastContainer
@@ -23,5 +25,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       theme="light"
       />
     </AuthProvider>
+    </GoogleOAuthProvider>
   </React.StrictMode>,
 )
