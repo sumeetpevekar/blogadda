@@ -1,6 +1,6 @@
 .createBlogContainer{
     width: 100vw;
-    height: calc(100vh - 130px);
+    min-height: calc(100vh - 130px);
     display: flex;
     flex-direction: column;
     box-shadow: 0 0 10px rgb(215, 214, 214);
@@ -37,4 +37,12 @@
     margin-top: 20px;
     font-family: "Poppins", sans-serif;
 
+}
+@media only screen and (max-width : 1000px){
+    .formContainer{
+        width: 100%;
+    }
+    .createBlogContainer{
+        padding: 30px 10%;
+    }
 }
